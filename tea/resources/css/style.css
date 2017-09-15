@@ -1,0 +1,185 @@
+/*TEA COZY PROJECT (UNIT 4)*/
+/*HTML Elements*/
+body {
+	display: flex;
+/*	flex-direction: column;*/ /*NOTE 4*/ 
+	background-color: black;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 22px;
+	opacity: 0.9;
+	position: relative;
+	margin: 0px; /*NOTE 1*/
+/*	align-items: center;*/ /*NOTE 4*/
+	text-align: center; /*NOTE 3*/
+	justify-content: center;
+}
+header {
+	display: flex;
+	position: fixed;
+	background-color: black;
+	height: 69px;
+	width: 100%;
+	border-bottom: 1px solid seashell;
+	align-items: center;
+	z-index: 1;
+	margin-top: 0px;
+}
+
+
+/*ABSTRACT CLASSES*/
+.text {
+	color: seashell;
+}
+.headliner { /*ISSUE 1*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: inherit;
+}
+.flex-container { /*NOTE 5*/
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+/*IDs*/
+#logobox { /*NOTE 2*/
+	display: flex;
+	flex-grow: 1;
+}
+#logobox img {
+	height: 50px;
+	padding: 9.5px 10px;
+}
+.nav {
+	padding: 0px 8px;
+}
+
+
+/*MAIN Containers*/
+#master-container {
+	display: flex;
+	margin-top: 70px;
+	flex-flow: column;
+	width: 1200px;
+	align-items: center;
+}
+#mission {
+	background-image: url(../images/img-mission-background.jpg);
+	display: flex;
+	width: inherit;
+	height: 700px;
+	justify-content: center;
+	align-items: center;
+}
+#mission .headliner {
+	background-color: black;
+}
+#tea-of-month { /*ISSUE 4*/
+	display: flex;
+/*	height: 700px;*/ /*ISSUE 4 AND NOTE 5*/ 
+	width: 1000px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+#tea-of-month .flex-container {
+	margin-bottom: 50px;
+}
+/*#teatypes {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap; /*NOTE 6 AND ISSUE 5*/
+
+.item img { /*NOTE 5*/
+	width: 300px;
+	height: 200px;
+	margin: 10px;
+}
+.item span { /*NOTE 5*/
+	display: block;
+	text-align: center;
+}
+#locations { /*NOTE 5*/
+	background-image: url(../images/img-locations-background.jpg);
+	display: inline-flex;
+	width: inherit;
+	height: 500px;
+	flex-direction: column;
+	align-items: center;
+}
+#locations .flex-container {
+	margin: auto;
+	width: 1100px;
+}
+#locations h2 {
+	margin-bottom: 15px; /*ISSUE 5*/
+}
+
+.location { /*NOTE 5*/
+	display: flex;
+	background-color: black;
+	opacity: 1.0;
+  margin: 5px 20px; /*NOTE 5*/
+  flex-basis: 280px; /*NOTE 5*/
+  flex-direction: column; /*NOTE 5*/
+  justify-content: center; /*NOTE 5*/
+}
+
+
+/*CONTACTS*/
+#contacts { /*ISSUE 2*/
+	display: flex;
+	flex-direction: column;
+	height: 200px;
+	align-items: center;
+}
+/*COPYRIGHT*/
+footer { /*ISSUE 3*/
+	display: flex;
+	width: inherit;
+	position: relative;
+	padding-left: 20px;
+	justify-content: flex-start;
+}
+
+
+
+
+
+
+/*testing properties*/
+.blocky{
+	border: 1px solid white;
+}
+.test {
+	color: white;
+
+/*	ISSUES
+
+ISSUE 1: padding of .headliners: how do I remove excess top and bottom padding?;
+
+ISSUE 2: element top-bottom padding (or spacing) causes the phone number to exceed the bounds set forth in the redline specs: how do I fit all 'Contacts' elements witin the bounds of height: 200px?;
+
+ISSUE 3: the left margin of the copyright container (REDLINE SPECIFIES 20px) causes its container to protrude from the master container: how do I keep the 'Copyright' container within the bounds of the 'master' container?;
+
+ISSUE 4: I cannot get the items in middle-container to flex-wrap: wrap (solved); I am commenting out the height property as not doing so makes the items protrude from their container and distract from my further; I still cannot squeeze them into the height requirement.
+
+ISSUE 5: Cannot get the correct margin value;
+*/
+
+
+/*	NOTES
+
+NOTE 1: remove gaps around screen;
+
+NOTE 2: properly arrange header items;
+
+NOTE 3: by using flex-direction column, justify content and align-items switch identity;
+
+NOTE 4: Tea of the Month, I'm afraid, is assuming column from this line... going to attempt to un-fuck myself by commenting it out and seeing if I can salvage the code.  I hope I can.
+
+NOTE 5: properties are taken from the DevTools inspection of the project page -- I cannot take from another source without giving credit;
+
+NOTE 6: Well, what do you know??!?!?!?!?  I had this code in here, but it was at the wrong order it appears!  I need to learn more about this order of CSS rules;
+*/
